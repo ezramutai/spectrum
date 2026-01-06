@@ -1,126 +1,59 @@
 # Spectrum
 
-**Spectrum** is a modular, role-based Point of Sale (POS) and business management system built with the **MEAN stack**.  
-It is designed around real-world organizational roles such as **Admin, Manager, HR, and Cashier**, with strict **Role-Based Access Control (RBAC)** and secure authentication.
+This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.0.4.
 
-The project prioritizes **architecture, security, and scalability** before feature expansion.
+## Development server
 
----
+To start a local development server, run:
 
-## 🎯 Project Vision
-
-Spectrum aims to provide a unified system for:
-
-- Sales and POS operations
-- Inventory and stock management
-- Supply and procurement
-- Human Resources (HR)
-- Reporting and auditing
-- System administration
-
-Users are authenticated once and **automatically routed** to the correct area of the system based on their role.
-
----
-
-## 🧠 Core Principles
-
-- Role-Based Access Control (RBAC)
-- Authentication-first development
-- Role-specific layouts and routing
-- Backend as the source of truth
-- Scalable, enterprise-style architecture
-
-This project intentionally starts with **login, routing, and access control** before implementing business features.
-
----
-
-## 🧑‍💼 Supported Roles
-
-| Role     | Description |
-|---------|-------------|
-| Admin   | Full system control and configuration |
-| Manager | Business oversight, reports, inventory |
-| HR      | Employee management and activity logs |
-| Cashier | Sales and POS operations |
-
-Each role:
-- Has a dedicated layout
-- Is restricted to specific routes
-- Cannot access unauthorized areas
-
----
-
-## 🗺️ Role-Based Landing Routes
-
-| Role     | Default Route |
-|---------|----------------|
-| Admin   | `/admin/dashboard` |
-| Manager | `/manager/overview` |
-| HR      | `/hr/employees` |
-| Cashier | `/pos` |
-
-After login, users are **automatically redirected** based on their assigned role.
-
----
-
-## 🧱 Frontend Architecture (Angular)
-
-Spectrum uses **Angular standalone components** with a clean, scalable folder structure:
-
-
-### Architectural Decisions
-- No Angular modules (`NgModule`)
-- Standalone components only
-- Route guards enforce RBAC
-- UI never trusts client-side role selection
-
----
-
-## 🔐 Authentication Strategy
-
-- Email / Staff ID + Password
-- JWT-based authentication
-- Role returned from backend after login
-- Planned biometric authentication using **WebAuthn**
-
-Authorization is enforced on both frontend and backend.
-
----
-
-## 🚧 Project Status
-
-- ✅ Angular project scaffolding
-- ✅ Role-based layouts
-- ✅ Login UI
-- ✅ RBAC-ready routing structure
-- 🚧 Authentication logic
-- 🚧 Backend (Node.js + Express)
-- 🚧 POS, HR, Inventory features
-
----
-
-## 🛠️ Tech Stack
-
-### Frontend
-- Angular (Standalone Components)
-- TypeScript
-- CSS (Tailwind planned)
-
-### Backend (Planned)
-- Node.js
-- Express
-- MongoDB
-- JWT Authentication
-- WebAuthn (Biometrics)
-
----
-
-## 🚀 Getting Started
-
-### Prerequisites
-- Node.js v18+
-- Angular CLI
-
-### Install Angular CLI
 ```bash
-npm install -g @angular/cli
+ng serve
+```
+
+Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+
+## Code scaffolding
+
+Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+
+```bash
+ng generate component component-name
+```
+
+For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+
+```bash
+ng generate --help
+```
+
+## Building
+
+To build the project run:
+
+```bash
+ng build
+```
+
+This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+
+## Running unit tests
+
+To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
+
+```bash
+ng test
+```
+
+## Running end-to-end tests
+
+For end-to-end (e2e) testing, run:
+
+```bash
+ng e2e
+```
+
+Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+
+## Additional Resources
+
+For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
